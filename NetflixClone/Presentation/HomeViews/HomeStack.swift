@@ -15,6 +15,10 @@ struct HomeStack: View {
     
     @Binding var movieDetailToShow: Movie?
     
+    @Binding var showPreviewFullscreen: Bool
+    @Binding var previewStartingIndex: Int
+    
+    
     var body: some View {
         ForEach(viewModel.allCategories, id: \.self) { category in
             VStack {
@@ -45,7 +49,14 @@ struct HomeStack: View {
 struct HomeStack_Previews: PreviewProvider {
     static var previews: some View {
         ScrollView {
-            HomeStack(viewModel: HomeViewModel(), topRowSelection: .home, selectedGenre: .AllGenres, movieDetailToShow: .constant(nil))
+            HomeStack(
+                viewModel: HomeViewModel(),
+                topRowSelection: .home,
+                selectedGenre: .AllGenres,
+                movieDetailToShow: .constant(nil),
+                showPreviewFullscreen: .constant(false),
+                previewStartingIndex: .constant(0)
+            )
                 .preferredColorScheme(.dark)
         }
         .foregroundColor(.white)

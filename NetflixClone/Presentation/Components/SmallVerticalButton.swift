@@ -12,6 +12,7 @@ struct SmallVerticalButton: View {
     var isOnImage: String
     var isOffImage: String
     var isOn: Bool
+    var color: Color = Color.white
     
 //    var imageName: String {
 //        if isOn {

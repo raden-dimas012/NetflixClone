@@ -64,7 +64,14 @@ struct HomeView: View {
                         previewStartingIndex: $previewStartingIndex
                     )
                     
-                    HomeStack(viewModel: viewModel, topRowSelection: topRowSelection, selectedGenre: homeGenre, movieDetailToShow: $movieDetailToShow)
+                    HomeStack(
+                        viewModel: viewModel,
+                        topRowSelection: topRowSelection,
+                        selectedGenre: homeGenre,
+                        movieDetailToShow: $movieDetailToShow,
+                        showPreviewFullscreen: $showPreviewFullscreen,
+                        previewStartingIndex: $previewStartingIndex
+                    )
                 }
             }
             

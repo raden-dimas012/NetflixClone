@@ -33,6 +33,7 @@ struct MoviePreviewRow: View {
                             .onTapGesture(perform: {
                                 previewStartingIndex = movieIndex
                                 showPreviewFullscreen = true
+                                // for showing preview list
                             })
                     }
                 }
